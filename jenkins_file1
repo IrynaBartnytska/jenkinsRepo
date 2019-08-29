@@ -2,7 +2,7 @@ node ('rab-1') {
   stage('cleaning') {
       cleanWs()
   }
-  def filetxt = '9.txt'
+  def filetxt = '8.txt'
   stage('working') {
     withAWS(region:'us-east-1',credentials:'aws_creds'){
          s3Download(file: filetxt, bucket: 'ring-test-automation', path: "jenkins-test/$filetxt")
